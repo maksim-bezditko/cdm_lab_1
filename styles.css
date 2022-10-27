@@ -1,0 +1,27 @@
+body {
+	padding: 20px;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+div {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 14px;
+	background-color: rgba(0, 184, 225, 0.688);
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(2, 131, 160, 0.415);
+	margin-right: 60px;
+	width: 300px;
+}
