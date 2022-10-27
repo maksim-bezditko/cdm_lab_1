@@ -54,33 +54,25 @@ setTimeout(() => {
 	
 	document.getElementById("compliment").addEventListener("click", () => {
 		const argument = values[prompt("What set do you want compliment of?")]
+
 		compliment(argument)
 	})
-
-
-
-
 
 	document.getElementById("union").addEventListener("click", () => {
 		const argument1 = values[prompt("What first set do you want to union?")]
 		const argument2 = values[prompt("What second set do you want to union?")]
+
 		union(argument1, argument2)
 	})
-
-
-
 	
 	document.getElementById("intersection").addEventListener("click", () => {
 		const argument1 = values[prompt("What first set do you want to intersect?")]
 		const argument2 = values[prompt("What second set do you want to intersect?")]
+		
 		intersection(argument1, argument2)
 	})
 
-
-
-
 	document.getElementById("difference").addEventListener("click", () => {
-
 		const argument1 = values[prompt("What set do you want to get the difference from?")]
 		const argument2 = values[prompt("What set do you want to difference from the previous one?")]
 
