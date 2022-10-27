@@ -22,7 +22,8 @@ button {
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(2, 131, 160, 0.415);
 	width: 300px;
-	transition: all 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+	transition: background-color 0.05s;
 	cursor: pointer;
 	font-size: 18px;
 }
