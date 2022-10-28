@@ -4,14 +4,26 @@ setTimeout(() => {
 	let C = prompt("List C set values separated by commas: ").split(", ");
 	let U = [...prompt("Own elements of universal set that are not in any other subset: ").split(", "), ...A, ...B, ...C];
 	
+	function count(item, arr) {
+		let counter = 0;
+		
+		for (let i of arr) {
+			if (i === item) {
+				counter++
+			}
+		}
+		
+		return counter;
+	}
+
 	function compliment(arr) { // 
-		 let arr1 = [];
-		 for (let item of U) {
-			  if (!arr1.includes(item) && !arr.includes(item)) {
+		let arr1 = [];
+		for (let item of U) {
+			if (!arr1.includes(item) && (count(item, U) > 1 || !arr.includes(item))) {
 					arr1.push(item)
-			  }
-		 }
-		 alert("Result equals: " + arr1.join(", "));
+			}
+		}
+		alert("Result equals: " + arr1.join(", "));
 	}
 	
 	function union(arr1, arr2) {
@@ -68,7 +80,7 @@ setTimeout(() => {
 	document.getElementById("intersection").addEventListener("click", () => {
 		const argument1 = values[prompt("What first set do you want to intersect?")]
 		const argument2 = values[prompt("What second set do you want to intersect?")]
-		
+
 		intersection(argument1, argument2)
 	})
 
