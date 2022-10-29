@@ -1,5 +1,5 @@
 {
-  "include": ["./index.ts"],
+  "include": ["typescript/index.ts"],
   "exclude": [],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
