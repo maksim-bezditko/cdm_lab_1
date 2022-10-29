@@ -23,7 +23,6 @@ button {
 	box-shadow: 0 0 10px rgba(2, 131, 160, 0.415);
 	width: 300px;
 	transition: transform 0.3s ease-in-out, background-color 0.05s;
-	transition: ;
 	cursor: pointer;
 	font-size: 18px;
 }

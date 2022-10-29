@@ -1,0 +1,22 @@
+{
+  "name": "cdm-lab-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksim-bezditko/cdm_lab_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maksim-bezditko/cdm_lab_1/issues"
+  },
+  "homepage": "https://github.com/maksim-bezditko/cdm_lab_1#readme",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
