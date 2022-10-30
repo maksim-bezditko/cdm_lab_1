@@ -5,6 +5,12 @@ setTimeout(() => {
     let C = prompt("List C set values separated by commas: ").split(", ");
     let ownU = prompt("Enter own values of U set: ").split(", ");
     let U = [...ownU, ...A, ...B, ...C];
+
+    document.getElementById("A").textContent = "A set contains: " + A.join(", ")
+    document.getElementById("B").textContent = "B set contains: " + B.join(", ")
+    document.getElementById("C").textContent = "C set contains: " + C.join(", ")
+    document.getElementById("U").textContent = "U set's own elements: " + ownU.join(", ")
+
     function count(item, arr) {
         let counter = 0;
         for (let i of arr) {
