@@ -29,25 +29,39 @@ setTimeout(() => {
         }
         alert("Result equals: " + arr1.join(", "));
     }
-    function union(arr1, arr2) {
-        let arr = [];
-        let general = arr1.concat(arr2);
-        for (let i = 0; i < general.length; i++) {
-            if (!arr.includes(general[i])) {
-                arr.push(general[i]);
+    function union(arrs) {
+        let result = [];
+
+        let all = [];
+
+        for (let i = 0; i < arrs.length; i++) {
+            all = [...all, ...arrs[i]]
+        }
+
+        for (let i of all) {
+            if (!result.includes(i)) {
+                result.push(i)
             }
         }
-        alert("Result equals: " + arr.join(", "));
+
+        alert("Result equals: " + result.join(", "));
     }
-    function intersection(arr1, arr2) {
-        let arr = [];
-        let general = arr1.concat(arr2);
-        for (let i = 0; i < general.length; i++) {
-            if (arr1.includes(general[i]) && arr2.includes(general[i]) && !arr.includes(general[i])) {
-                arr.push(general[i]);
+    function intersection(arrs) {
+        let first = arrs[0];
+        let others = [];
+
+        let result = [];
+        for (let i = 1; i < arrs.length; i++) {
+            others = [...others, ...arrs[i]]
+        }
+
+        for (let i of first) {
+            if (count(i, others) === arrs.length - 1) {
+                result.push(i)
             }
         }
-        alert("Result equals: " + arr.join(", "));
+        alert("Result equals: " + result.join(", "))
+        
     }
     function difference(arr1, arr2) {
         let arr = [];
@@ -73,18 +87,27 @@ setTimeout(() => {
         compliment(argument);
     });
     unionButton.addEventListener("click", () => {
-        const argument1 = values[prompt("What first set do you want to union?")];
-        const argument2 = values[prompt("What second set do you want to union?")];
-        union(argument1, argument2);
+        const args = prompt("Enter sets for union (e.g A, C, B): ").split(", ");
+        const arrs = [];
+
+        for (let i of args) {
+            arrs.push(values[i])
+        }
+
+        union(arrs);
     });
     intersectionButton.addEventListener("click", () => {
-        const argument1 = values[prompt("What first set do you want to intersect?")];
-        const argument2 = values[prompt("What second set do you want to intersect?")];
-        intersection(argument1, argument2);
+        const args = prompt("Enter sets for intersection (e.g A, C, B): ").split(", ");
+        const arrs = [];
+
+        for (let i of args) {
+            arrs.push(values[i])
+        }
+        intersection(arrs);
     });
     differenceButton.addEventListener("click", () => {
         const argument1 = values[prompt("What set do you want to get the difference from?")];
         const argument2 = values[prompt("What set do you want to difference from the previous one?")];
         difference(argument1, argument2);
     });
-}, 5000);
+}, 2000);
